@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('building') {
             steps {
-                echo 'sudo hostnamectl set-hostname "app.kocatepeteknoloji.com"'
+                sh 'sudo hostnamectl set-hostname "app.kocatepeteknoloji.com"'
                 sh 'sudo apt list --upgradable  && sudo apt-get update -y && sudo apt-get upgrade -y'
                 sh 'sudo apt install -y lsb-release gnupg2 ca-certificates apt-transport-https software-properties-common'
                 sh 'sudo add-apt-repository ppa:ondrej/php'
