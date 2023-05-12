@@ -1,5 +1,7 @@
 pipeline {
-    agent appnode
+    agent {
+        label 'ubuntuserver'
+    }
 
     stages {
         stage('building') {
